@@ -11,3 +11,17 @@
 <li *ngFor="let hobbie of authorHobbies">
   {{hobbie}}
 </li>
+
+<button (click)="clicked()">Click</button>
+
+<div *ngIf = "buttonClicked">
+  some text
+</div>
+
+<li *ngFor="let record of authorDataProviderService.getSomeData()">
+  {{record}}
+</li>
+
+<app-some-new-component>
+
+</app-some-new-component>
