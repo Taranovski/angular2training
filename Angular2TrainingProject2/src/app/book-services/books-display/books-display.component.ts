@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Book} from './../../domain/book';
+import {Book} from './../domain/book';
 
 @Component({
   selector: 'app-books-display',
@@ -10,9 +10,10 @@ export class BooksDisplayComponent implements OnInit {
 
   @Input() books:Book[];
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit() {
+  ngOnInit():void {
   }
 
 }

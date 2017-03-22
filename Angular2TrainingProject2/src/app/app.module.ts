@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { BookServicesModule, BookProviderService, BooksDisplayComponent } from './book-services/book-services.module';
+import { BookServicesModule, BookProviderService, BooksDisplayComponent, BookDisplayComponent, Book } from './book-services';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksDisplayComponent
+    BooksDisplayComponent,
+    BookDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,5 @@ import { BookServicesModule, BookProviderService, BooksDisplayComponent } from '
   providers: [BookProviderService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(public bookProducer: BookProviderService){}
+export class AppModule  {
 }

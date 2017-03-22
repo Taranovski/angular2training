@@ -1,3 +1,7 @@
 <p>
   books-display works!
 </p>
+
+<li *ngFor="let book of books">
+  <app-book-display [book]=book></app-book-display>
+</li>
