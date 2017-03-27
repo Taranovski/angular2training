@@ -1,1 +1,24 @@
-{{book}}
+<td>
+  {{book.name}}
+</td>
+<td>
+  {{book.field}}
+</td>
+<td>
+  {{book.topic}}
+</td>
+<td>
+  {{book.releaseYear.toDateString()}}
+</td>
+<td>
+  {{book.authors}}
+</td>
+<td>
+  <button (click)="deleteThis()">delete</button>
+</td>
+<td>
+  <button (click)="switchEdit()">edit name</button>
+</td>
+<td *ngIf="editEnabled">
+  <input type="text" [(ngModel)]="book.name"/>
+</td>

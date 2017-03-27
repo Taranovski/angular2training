@@ -16,4 +16,8 @@ export class AppComponent {
   ngOnInit():void {
     this.books = this.bookProducer.getSomeBooks();
   }
+
+  deleteById(id:number):void {
+    this.books = this.books.filter((item:Book, index:number, items:Book[]) => item.id !== id);
+  }
 }
